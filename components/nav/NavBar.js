@@ -6,6 +6,7 @@ import Image from "next/image";
 import NetflixLogo from "../../public/static/netflix.svg";
 
 import ExpandMore from "../../public/static/expand_more.svg";
+import ExpandLess from "../../public/static/expand_less.svg";
 
 const NavBar = ({ userName }) => {
   const router = useRouter();
@@ -42,15 +43,24 @@ const NavBar = ({ userName }) => {
         <nav className={styles.navContainer}>
           <div>
             <button className={styles.usernameBtn} onClick={handleShowDropDown}>
-              <p className={styles.username}>
-                {userName}
+              <p className={styles.username}>{userName}</p>
+              {!showDropDown ? (
                 <Image
                   src={ExpandMore}
                   alt="Expand DropDown"
                   width={24}
                   height={24}
+                  style={{ transition: "0.5s ease" }}
                 />
-              </p>
+              ) : (
+                <Image
+                  src={ExpandLess}
+                  alt="Expand DropDown"
+                  width={24}
+                  height={24}
+                  style={{ transition: "0.5s ease" }}
+                />
+              )}
             </button>
             {showDropDown && (
               <div className={styles.navDropdown}>
