@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NavBar.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -7,14 +7,28 @@ import NetflixLogo from "../../public/static/netflix.svg";
 
 import ExpandMore from "../../public/static/expand_more.svg";
 import ExpandLess from "../../public/static/expand_less.svg";
+import { magic } from "../../lib/magic-client";
 
-const NavBar = ({ userName }) => {
+const NavBar = () => {
   const router = useRouter();
   const [showDropDown, setShowDropDown] = useState(false);
+  const [userName, setUserName] = useState("");
   const handleOnClickHome = (e) => {
     e.preventDefault();
     router.push("/");
   };
+
+  useEffect(async () => {
+    try {
+      const { email, publicAddress } = await magic.user.getMetadata();
+      if (email) {
+        setUserName(email);
+      }
+    } catch (error) {
+      // Handle errors if required!
+      console.error("Error retrieving email", error);
+    }
+  }, []);
 
   const handleOnClickMyList = (e) => {
     e.preventDefault();

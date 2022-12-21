@@ -11,11 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afe2e204-9d0b-4df3-8c1e-c9841109bfc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/magic-client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/static/signin-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/Login.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/videos.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/videos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,10 @@
       <workItem from="1671179660342" duration="13091000" />
       <workItem from="1671426479456" duration="7990000" />
       <workItem from="1671434979403" duration="13925000" />
-      <workItem from="1671511739952" duration="14607000" />
+      <workItem from="1671511739952" duration="23193000" />
+      <workItem from="1671600345770" duration="4130000" />
+      <workItem from="1671606703059" duration="3178000" />
+      <workItem from="1671613576593" duration="4961000" />
     </task>
     <servers />
   </component>
@@ -90,10 +97,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="665" y="358" width="580" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1671516321683">
+    <state x="665" y="358" width="580" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1671602490168">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="665" y="358" width="580" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1671516321683" />
+    <state x="665" y="358" width="580" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1671602490168" />
     <state x="693" y="303" width="524" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1671194063104">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -106,6 +113,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="456" y="188" width="1007" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1671182602516" />
+    <state x="654" y="302" width="611" height="502" key="find.popup" timestamp="1671616276596">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="654" y="302" width="611" height="502" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1671616276596" />
     <state x="624" y="252" key="run.anything.popup" timestamp="1671434993401">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
