@@ -3,10 +3,20 @@ import styles from "./Loader.module.css";
 
 const Loader = () => {
   return (
-    <>
-      <h4>Loading</h4>
-      <span className={styles.loader}></span>
-    </>
+    <div className={styles.ldsSpinner}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   );
 };
 

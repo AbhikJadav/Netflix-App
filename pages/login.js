@@ -5,7 +5,7 @@ import Image from "next/image";
 import NetflixLogo from "../public/static/netflix.svg";
 import { useRouter } from "next/router";
 import { magic } from "../lib/magic-client";
-import Loader from "../components/Loader/Loader";
+import ButtonLoader from "../components/ButtonLoader/ButtonLoader";
 
 const Login = () => {
   const router = useRouter();
@@ -33,7 +33,7 @@ const Login = () => {
     e.preventDefault();
     if (email) {
       setIsLoading(true);
-      if (email === "abhik.ciphernutz@gmail.com") {
+      if (email === "abhik.jadav002@gmail.com") {
         try {
           const didToken = await magic.auth.loginWithMagicLink({
             email,
@@ -85,7 +85,7 @@ const Login = () => {
           <button onClick={handleLoginWithEmail} className={styles.loginBtn}>
             {isLoading ? (
               <>
-                <Loader />
+                <ButtonLoader />
               </>
             ) : (
               "Sign In"
