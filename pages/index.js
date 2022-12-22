@@ -23,7 +23,6 @@ export default function Home({
   productivityVideos,
   popularVideos,
 }) {
-  console.log({ disneyVideos });
   return (
     <div className={styles.container}>
       <Head>
@@ -33,6 +32,7 @@ export default function Home({
       <NavBar userName={"test@gmail.com"} />
       <div className={styles.main}>
         <Banner
+          videoId={"4zH5iYM4wJo"}
           title="Clifford the red dog"
           subTitle="a very cute dog"
           imgUrl="/static/clifford.webp"

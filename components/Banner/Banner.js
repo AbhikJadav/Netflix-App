@@ -2,10 +2,13 @@ import React from "react";
 import styles from "./Banner.module.css";
 import Image from "next/image";
 import PlayArrowIcon from "../../public/static/play_arrow.svg";
-const Banner = ({ title, subTitle, imgUrl }) => {
+import { useRouter } from "next/router";
+const Banner = ({ title, subTitle, imgUrl, videoId }) => {
   console.log("imgUrl", imgUrl);
+  const router = useRouter();
   const handleOnPlay = () => {
     console.log("handle play button");
+    router.push(`/video/${videoId}`);
   };
 
   return (
