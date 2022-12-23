@@ -3,18 +3,44 @@ import { useRouter } from "next/router";
 import Modal from "react-modal";
 import styles from "../../styles/Video.module.css";
 import clsx from "classnames";
+import { getYouTubeVideoById } from "../../lib/videos";
 Modal.setAppElement("#__next");
-const Video = () => {
-  const router = useRouter();
-  const video = {
-    title: "Hi cute dog",
-    publishTime: "1990-01-01",
-    description:
-      "A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger? ",
-    channelTitle: "Paramount Pictures",
-    viewCount: 10000,
+export async function getStaticProps(context) {
+  // const video = {
+  //   title: "Hi cute dog",
+  //   publishTime: "1990-01-01",
+  //   description:
+  //     "A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger?A big red dog that is super cute,can he get any bigger? ",
+  //   channelTitle: "Paramount Pictures",
+  //   viewCount: 10000,
+  // };
+  const videoId = "4zH5iYM4wJo";
+  const videoArray = await getYouTubeVideoById(videoId);
+  return {
+    props: { video: videoArray.length > 0 ? videoArray[0] : {} },
+    revalidate: 10,
   };
-  const { title, publishTime, description, channelTitle, viewCount } = video;
+}
+export async function getStaticPaths() {
+  const listOfVideo = ["mYfJxlgR2jw", "4zH5iYM4wJo", "KCPEHsAViiQ"];
+  const paths = listOfVideo.map((videoId) => ({
+    params: {
+      videoId,
+    },
+  }));
+
+  return { paths, fallback: "blocking" };
+}
+const Video = ({ video }) => {
+  const router = useRouter();
+
+  const {
+    title,
+    publishTime,
+    description,
+    channelTitle,
+    statistics: { viewCount },
+  } = video;
   return (
     <div className={styles.container}>
       <Modal
@@ -47,7 +73,7 @@ const Video = () => {
             <div className={styles.col2}>
               <p className={clsx(styles.subText, styles.subTextWrapper)}>
                 <span className={styles.textColor}>Cast:</span>
-                <span className={styles.channelTitle}>channelTitle</span>
+                <span className={styles.channelTitle}>{channelTitle}</span>
               </p>
               <p className={clsx(styles.subText, styles.subTextWrapper)}>
                 <span className={styles.textColor}>View Count:</span>

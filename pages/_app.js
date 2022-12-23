@@ -6,7 +6,7 @@ import Loader from "../components/Loader/Loader";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const handleComplete = () => {
       setIsLoading(false);
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
     }
   };
   useEffect(() => {
-    loginHandler();
+    // loginHandler();
   }, []);
 
   return isLoading ? (
